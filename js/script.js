@@ -46,7 +46,7 @@ function completedItem(){
     completeCourseItem.style.justifyContent = 'space-between'
     completeCourseItem.style.marginBottom='10px'
     completeCourseItem.style.fontSize='1.2rem'
-    completeCourseItem.style.textTransform='uppercase'
+    // completeCourseItem.style.textTransform='uppercase'
     
 
     let checkBox = completeCourseItem.querySelector("input[type='checkbox']");

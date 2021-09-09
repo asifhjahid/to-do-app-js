@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+    background-color: #ced6e0;
+}
 .container {
   width: 100%;
   height: 100%;
@@ -11,28 +14,51 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .header #header-title {
   margin-bottom: 20px;
 }
-.header #input-text {
+.header .add-course #input-text {
   width: 300px;
   height: 35px;
+  border: 1px solid rgb(156, 142, 142);
+  outline: none;
+  font-size: 1.2rem;
+  
 }
-.header #button {
-  padding: 5px 10px;
-  margin-left: 4px;
+.header .add-course #input-text:focus{
+    border: 1px solid rgb(20, 154, 199);
+  }
+.header .add-course #input-text::placeholder{
+    color: rgb(168, 161, 161);
+    font-size: 1rem;
+}
+.header .add-course #button {
+  padding: 8px 10px;
+  margin-left: 10px;
+  outline: none;
+  border: none;
+  background-color: rgb(7, 173, 57);
+  color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.header .add-course #button:hover {
+background-color:  rgba(6, 114, 39, 0.9);
 }
 .courses {
   display: flex;
   justify-content: space-around;
-  margin-top: 30px;
+  margin-top: 56px;
 }
 .courses .enroll-courses {
-  background-color: lightblue;
+  background-color: rgb(171, 225, 243);
   width: 350px;
-  height: 190px;
+  min-height: 190px;
+  box-shadow: 5px 5px 10px rgb(182, 179, 179),
+              -5px -5px 10px rgb(182, 179, 179) ;
+  border-radius: 4px;
 }
 .enroll-courses .enroll-course-heading {
   text-align: center;
@@ -41,23 +67,29 @@
 }
 .enroll-courses .enroll-courses-list {
   padding-left: 10px;
+  margin-bottom: 10px;
 }
 .enroll-courses .enroll-courses-list li {
   list-style: none;
+  margin-bottom: 10px;
+  /* display: flex; */
 }
 .enroll-courses .enroll-courses-list input[type="checkbox"] {
-  width: 20px;
-  height: 18px;
+  width: 24px;
+  height: 16px;
 }
 .enroll-courses .enroll-courses-list label {
-  margin-bottom: 10px;
+  margin: 0 0 10px 5px;
   font-size: 1.2rem;
-  text-transform: uppercase;
+
 }
 .courses .completed-courses {
-  background-color: rgb(167, 231, 189);
+  background-color: rgb(164, 245, 192);
   width: 350px;
-  height: 190px;
+  min-height: 190px;
+  box-shadow: 5px 5px 10px rgb(182, 179, 179),
+  -5px -5px 10px rgb(182, 179, 179) ;
+  border-radius: 4px;
 }
 .completed-courses .completed-course-heading {
   text-align: center;
