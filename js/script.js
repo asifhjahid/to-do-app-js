@@ -38,11 +38,16 @@ function addEnrollCourses(e){
 
 function completedItem(){
     let completeCourseItem = this.parentNode;
-    let deleteButton = document.createElement('button');
+    let deleteButton = document.createElement('button')
     deleteButton.innerText = 'Delete';
     deleteButton.className = 'deleteBtn'
     completeCourseItem.appendChild(deleteButton)
-    console.log(completeCourseItem);
+    completeCourseItem.style.display='flex'
+    completeCourseItem.style.justifyContent = 'space-between'
+    completeCourseItem.style.marginBottom='10px'
+    completeCourseItem.style.fontSize='1.2rem'
+    completeCourseItem.style.textTransform='uppercase'
+    
 
     let checkBox = completeCourseItem.querySelector("input[type='checkbox']");
     checkBox.remove();
@@ -68,3 +73,11 @@ function completedButton(completeItem,deleteButton){
         deleteButtonItem.onclick = deleteButton;
 }
 
+for(let i= 0; i<enrollCoursesUi.children.length ; i++){
+  updatedItems(enrollCoursesUi.children[i],completedItem)
+    
+}
+for(let i= 0; i<completedUiList.children.length ; i++){
+    completedButton(completedUiList.children[i],deleteElement)
+      
+  }

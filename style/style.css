@@ -51,7 +51,8 @@
 }
 .enroll-courses .enroll-courses-list label {
   margin-bottom: 10px;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
 .courses .completed-courses {
   background-color: rgb(167, 231, 189);
@@ -63,6 +64,29 @@
   padding: 5px;
   margin-bottom: 10px;
 }
-.completed-courses .completed-courses-list {
+.completed-courses .completed-courses-list li { 
   padding-left: 10px;
+  list-style: none;
+  position: relative;
+  font-size: 1.2rem;
 }
+.completed-courses .completed-courses-list #completedItem { 
+    margin-bottom: 10px;
+  }
+.completed-courses .completed-courses-list .deleteBtn  { 
+  
+    position: absolute;
+    right: 5%;
+    margin-right: 10px;
+    padding: 4px 10px;
+    font-size: .8rem;
+    background-color: rgb(241, 25, 25);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    
+}
+.completed-courses .completed-courses-list .deleteBtn:hover{
+    background-color: rgba(197, 6, 6, 0.9);
+}
+  
